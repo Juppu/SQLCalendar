@@ -17,7 +17,7 @@ SELECT
   WeekOfMonth   = CONVERT(TINYINT, DENSE_RANK() OVER 
                   (PARTITION BY [year], [month] ORDER BY [week])),
   WeekOfYear    = CONVERT(TINYINT, [week]),
-  ISOWeekOfYear = CONVERT(TINYINT, ISOWeek),
+  ISOWeekOfYear = CONVERT(TINYINT, [ISOweek]),
   [Month]       = CONVERT(TINYINT, [month]),
   [MonthName]   = CONVERT(VARCHAR(10), [MonthName]),
   [Quarter]     = CONVERT(TINYINT, [quarter]),
